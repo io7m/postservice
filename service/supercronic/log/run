@@ -1,0 +1,3 @@
+#!/bin/sh
+/bin/mkdir -p /mail/log/supercronic
+exec /sbin/svlogd -ttt /mail/log/supercronic

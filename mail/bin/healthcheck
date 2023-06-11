@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Check that the smtp service is listening
+/usr/bin/nc -z -vvv localhost 25  || exit 1
+# Check that the POP3 service is listening
+/usr/bin/nc -z -vvv localhost 110 || exit 1
+# Check that the POP3s service is listening
+/usr/bin/nc -z -vvv localhost 995 || exit 1

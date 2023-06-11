@@ -1,0 +1,3 @@
+#!/bin/sh
+/bin/mkdir -p /mail/log/opendkim
+exec /sbin/svlogd -ttt /mail/log/opendkim
