@@ -6,6 +6,11 @@ mkdir -p out
 VERSION=$(head -n 1 version.txt)
 VERSION_ALPINE=$(head -n 1 version_alpine.txt)
 
+pushd postfix_exporter
+CGO_ENABLED=0 go build -tags nosystemd
+popd
+cp postfix_exporter/postfix_exporter mail/bin/postfix_exporter
+
 exec podman build \
 --format docker \
 --build-arg "version=${VERSION}" \
