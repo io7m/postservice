@@ -37,4 +37,4 @@ VOLUME "/mail/etc"
 VOLUME "/mail/log"
 VOLUME "/mail/home"
 
-ENTRYPOINT ["/sbin/runsvdir", "/service"]
+ENTRYPOINT ["/usr/sbin/runsvdir", "/service"]
